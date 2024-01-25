@@ -13,6 +13,11 @@
 		8DC15D4A2B61145200EE60BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DC15D492B61145200EE60BF /* Assets.xcassets */; };
 		8DC15D4D2B61145200EE60BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DC15D4B2B61145200EE60BF /* LaunchScreen.storyboard */; };
 		8DC15D552B611C8800EE60BF /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC15D542B611C8800EE60BF /* MainTabBarViewController.swift */; };
+		8DC15D572B61244900EE60BF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC15D562B61244900EE60BF /* SearchViewController.swift */; };
+		8DC15D622B629E4600EE60BF /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8DC15D612B629E4600EE60BF /* SDWebImage */; };
+		8DC15D642B629E4600EE60BF /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8DC15D632B629E4600EE60BF /* SDWebImageMapKit */; };
+		8DC15D662B629E9700EE60BF /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC15D652B629E9700EE60BF /* RecipeCollectionViewCell.swift */; };
+		8DC15D682B629FA100EE60BF /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC15D672B629FA100EE60BF /* CollectionViewTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,9 @@
 		8DC15D4C2B61145200EE60BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DC15D4E2B61145200EE60BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC15D542B611C8800EE60BF /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		8DC15D562B61244900EE60BF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		8DC15D652B629E9700EE60BF /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
+		8DC15D672B629FA100EE60BF /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DC15D642B629E4600EE60BF /* SDWebImageMapKit in Frameworks */,
+				8DC15D622B629E4600EE60BF /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +66,82 @@
 		8DC15D3F2B61145000EE60BF /* Recipe Roulette */ = {
 			isa = PBXGroup;
 			children = (
+				8DC15D582B62977400EE60BF /* Managers */,
+				8DC15D592B62978E00EE60BF /* Resources */,
+				8DC15D5A2B6297A100EE60BF /* Models */,
+				8DC15D5B2B6297AF00EE60BF /* Views */,
+				8DC15D5C2B6297C000EE60BF /* ViewModels */,
+				8DC15D5D2B6297D100EE60BF /* Controllers */,
 				8DC15D402B61145000EE60BF /* AppDelegate.swift */,
 				8DC15D422B61145000EE60BF /* SceneDelegate.swift */,
-				8DC15D442B61145000EE60BF /* HomeViewController.swift */,
 				8DC15D492B61145200EE60BF /* Assets.xcassets */,
 				8DC15D4B2B61145200EE60BF /* LaunchScreen.storyboard */,
 				8DC15D4E2B61145200EE60BF /* Info.plist */,
-				8DC15D542B611C8800EE60BF /* MainTabBarViewController.swift */,
 			);
 			path = "Recipe Roulette";
+			sourceTree = "<group>";
+		};
+		8DC15D582B62977400EE60BF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		8DC15D592B62978E00EE60BF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8DC15D5A2B6297A100EE60BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8DC15D5B2B6297AF00EE60BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8DC15D652B629E9700EE60BF /* RecipeCollectionViewCell.swift */,
+				8DC15D672B629FA100EE60BF /* CollectionViewTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8DC15D5C2B6297C000EE60BF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8DC15D5D2B6297D100EE60BF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8DC15D5E2B6297E400EE60BF /* General */,
+				8DC15D5F2B6297FE00EE60BF /* Core */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8DC15D5E2B6297E400EE60BF /* General */ = {
+			isa = PBXGroup;
+			children = (
+				8DC15D542B611C8800EE60BF /* MainTabBarViewController.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		8DC15D5F2B6297FE00EE60BF /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8DC15D442B61145000EE60BF /* HomeViewController.swift */,
+				8DC15D562B61244900EE60BF /* SearchViewController.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +160,10 @@
 			dependencies = (
 			);
 			name = "Recipe Roulette";
+			packageProductDependencies = (
+				8DC15D612B629E4600EE60BF /* SDWebImage */,
+				8DC15D632B629E4600EE60BF /* SDWebImageMapKit */,
+			);
 			productName = "Recipe Roulette";
 			productReference = 8DC15D3D2B61145000EE60BF /* Recipe Roulette.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +192,9 @@
 				Base,
 			);
 			mainGroup = 8DC15D342B61145000EE60BF;
+			packageReferences = (
+				8DC15D602B629E4600EE60BF /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 8DC15D3E2B61145000EE60BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +221,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DC15D662B629E9700EE60BF /* RecipeCollectionViewCell.swift in Sources */,
+				8DC15D572B61244900EE60BF /* SearchViewController.swift in Sources */,
 				8DC15D452B61145000EE60BF /* HomeViewController.swift in Sources */,
+				8DC15D682B629FA100EE60BF /* CollectionViewTableViewCell.swift in Sources */,
 				8DC15D552B611C8800EE60BF /* MainTabBarViewController.swift in Sources */,
 				8DC15D412B61145000EE60BF /* AppDelegate.swift in Sources */,
 				8DC15D432B61145000EE60BF /* SceneDelegate.swift in Sources */,
@@ -351,6 +438,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8DC15D602B629E4600EE60BF /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.18.10;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8DC15D612B629E4600EE60BF /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DC15D602B629E4600EE60BF /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		8DC15D632B629E4600EE60BF /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DC15D602B629E4600EE60BF /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8DC15D352B61145000EE60BF /* Project object */;
 }
